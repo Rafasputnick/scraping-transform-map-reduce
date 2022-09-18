@@ -1,0 +1,21 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Launch Scrapy Spider",
+            "type": "python",
+            "request": "launch",
+            "module": "scrapy",
+            "args": [
+                "runspider",
+                "${workspaceFolder}/main.py",
+                "-o pokemons.json",
+                "-s FEED_EXPORT_ENCODING=utf-8"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

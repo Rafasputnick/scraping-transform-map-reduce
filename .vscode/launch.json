@@ -47,21 +47,6 @@
                 "average_damage_by_type.txt"
             ],
             "console": "integratedTerminal"
-        },
-        {
-            "name": "Runnnnnn",
-            "preLaunchTask": "Python: Average damage by type",
-        }
-    ],
-    "compounds": [
-        {
-            "name": "Run all modes",
-            "configurations": [
-                "Python: Scraping",
-                "Python: Transform data",
-                "Python: Count by color",
-                "Python: Average damage by type",
-            ]
         }
     ]
 }

@@ -1,0 +1,54 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Python: Scraping",
+            "command": "scrapy runspider scraping.py -o pokemons.json",
+            "type": "shell",
+            "group": "test",
+            "presentation": {
+                "panel": "shared", 
+                "reveal": "always",
+                "focus": true
+            }
+        },
+        {
+            "label": "Python: Transform data",
+            "command": "python transform.py",
+            "type": "shell",
+            "group": "test",
+            "presentation": {
+                "panel": "shared", 
+                "reveal": "always",
+                "focus": true
+            }
+        },
+        {
+            "label": "Python: Count by color",
+            "command": "python count_by_color.py pokemons_tratado.json > count_by_color.txt",
+            "type": "shell",
+            "group": "test",
+            "presentation": {
+                "panel": "shared", 
+                "reveal": "always",
+                "focus": true
+            }
+        },
+        {
+            "label": "Python: Average damage by type",
+            "command": "python average_damage_by_type.py pokemons_tratado.json > average_damage_by_type.txt",
+            "type": "shell",
+            "group": "test",
+            "presentation": {
+                "panel": "shared", 
+                "reveal": "always",
+                "focus": true
+            },
+            "dependsOrder": "sequence",
+            "dependsOn": ["Python: Scraping", "Python: Transform data", "Python: Count by color"]
+        }
+
+    ]
+}

@@ -1,0 +1,10 @@
+"Black"	1
+"Blue"	25
+"Brown"	35
+"Gray"	8
+"Green"	9
+"Pink"	12
+"Purple"	23
+"Red"	16
+"White"	3
+"Yellow"	19
